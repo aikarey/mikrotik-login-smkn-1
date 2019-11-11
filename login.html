@@ -1,0 +1,173 @@
+<!--
+======================================================
+This Template Is : 
+Created By  : Rendi Bayu Setiawan
+Facebook	: https://facebook.com/aikarey1
+Github		: https://github.com/aikarey
+======================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Login SMK N 1 Pemalang</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/sweetalert/sweetalert2.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="assets/sweetalert/sweetalert2.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="bg-primary">
+
+<!-- loader -->
+<div class="load-wrapper">
+	<div class="loader">
+
+	</div>
+</div>
+<!-- end of loader -->
+<div id="particles-js"></div>
+$(if chap-id)
+	<form name="sendin" action="$(link-login-only)" method="post">
+		<input type="hidden" name="username" />
+		<input type="hidden" name="password" />
+		<input type="hidden" name="dst" value="$(link-orig)" />
+		<input type="hidden" name="popup" value="true" />
+	</form>
+
+	<script type="text/javascript" src="md5.js"></script>
+	<script type="text/javascript">
+	<!--
+	    function doLogin() {
+		document.sendin.username.value = document.login.username.value;
+		document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+		document.sendin.submit();
+		return false;
+	    }
+	//-->
+	</script>
+$(endif)
+
+            $(if error)
+               <script type="text/javascript">
+               	$(window).on('load', function(){
+            setTimeout(function(){
+            Swal.fire({
+					  type: 'error',
+					  title: 'Oops...',
+					  text: '$(error)'
+					});
+               	}, 1000)
+               	});
+               </script>
+            $(endif)
+<!-- Login Form -->
+<div class="container" id="login">
+   <div class="row p-5">
+	<div class="login-wrapper col-md-12 shadow">
+		<div class="row">
+			<div class="col-md-7">
+
+			<div class="login-form">
+
+			<div class="login-logo-wrapper d-flex justify-content-center">
+				<img src="assets/img/logo.png" class="login-logo">
+			</div>
+			<h3 class="text-center mb-4">Silahkan Login</h1>
+
+			<form action="$(link-login-only)" method="post" name="login">
+		   <input type="hidden" name="dst" value="$(link-orig)"/>
+           <input type="hidden" name="popup" value="true"/>
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+			  </div>
+			  <input type="text" class="form-control" aria-label="Username" id="username_field" name="username" data-target="username" aria-describedby="basic-addon1">
+			  <p class="placeholder text-muted" onclick="$('#username_field').focus()" id="username">Username</p>
+			</div>
+
+			<div class="input-group mb-3">
+			  <div class="input-group-prepend">
+			    <span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
+			  </div>
+			  <input type="password" class="form-control" data-target="password" id="password_field" aria-label="Password" aria-describedby="basic-addon1" name="password">
+			  <p class="placeholder text-muted" onclick="$('#password_field').focus()" id="password">Password</p>
+		    </div>
+		    <div class="row" id="button2">
+		    	<div class="col-md-6">
+		    	<button class="btn btn-primary btn-block mb-2" type="submit" id="login"><i class="fas fa-sign-in-alt"></i> Login</button>
+		    	</div>
+		    	<div class="col-md-6">
+		    		<a class="btn btn-warning btn-block mb-2" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)"><i class="fas fa-users"></i> Guest</a>
+		    	</div>
+		    </div>
+			<button class="btn btn-block btn-outline-success" data-toggle="modal" data-target="#cara-penggunaan" type="button"><i class="fas fa-question-circle"></i> Cara Penggunaan</button>
+		    </form>
+		</div>
+		</div>
+			<div class="col-md-5 my-auto" id="logo-bisa">
+				<p class="text-primary sapaan"></p>
+				<img src="assets/img/smk-bisa.png" class="smk-bisa">
+			</div>
+		</div>
+
+	</div>
+   </div>
+</div>
+<!-- end of login form -->
+
+<!-- modal -->
+<!-- cara penggunaan -->
+
+<div class="modal fade" id="cara-penggunaan" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Cara Login Di Hotspot SMK N 1 Pemalang</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>1. Untuk tamu gunakan username = tamu dan password = tamu.</p>
+        <p>2. Untuk guru yang tidak memiliki akun untuk login silahkan baca no 4.</p>
+        <p>3. Untuk siswa gunakanlah nis kalian masing - masing, contoh username = 14005, password = 14005.</p>
+        <p>4. Jika terjadi masalah pada layanan hotspot silahkan hubungi <b>Anton Kurniawan</b> di <b> 082328230371</b></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Paham</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/particles.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="smtp.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript">
+
+<!--
+  document.login.username.focus();
+//-->
+	$(window).on('load', function(){
+		$('.load-wrapper').addClass('hide');
+	});
+$('#login').on('click', function(e){
+const username = $('#username_field').val();
+const password = $('#password_field').val();
+window.localStorage.setItem('username', username);
+window.localStorage.setItem('password', password);
+});
+</script>
+</body>
+</html>

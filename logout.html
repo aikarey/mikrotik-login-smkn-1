@@ -1,0 +1,166 @@
+
+<!--
+======================================================
+This Template Is : 
+Created By  : Rendi Bayu Setiawan
+Facebook  : https://facebook.com/aikarey1
+Github    : https://github.com/aikarey
+======================================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Logout SMK N 1 Pemalang</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="author" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+
+  <link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/fontawesome/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/sweetalert/sweetalert2.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <script type="text/javascript" src="assets/sweetalert/sweetalert2.min.js"></script>
+  <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+</head>
+
+<body class="bg-primary">
+<!-- loader -->
+<div class="load-wrapper">
+	<div class="loader">
+		
+	</div>
+</div>
+<!-- end of loader -->
+<div id="particles-js"></div>
+
+<!-- Login Form -->
+<script language="JavaScript">
+<!--
+    function openLogin() {
+	if (window.name != 'hotspot_logout') return true;
+	open('$(link-login)', '_blank', '');
+	window.close();
+	return false;
+    }
+//-->
+</script>
+
+      <script type="text/javascript">
+               	$(window).on('load', function(){
+               	    setTimeout(function(){
+               		Swal.fire({
+					  type: 'success',
+					  title: 'Success',
+					  text: 'Anda telah logout!'
+					});
+               	},1000)
+                 });
+               </script>
+<div class="container" id="login">
+   <div class="row p-5">
+  <div class="login-wrapper col-md-12 shadow" id="logout">
+
+      <div class="login-logo-wrapper d-flex justify-content-center">
+        <img src="assets/img/logo.png" class="login-logo" id="stats-logo" style="transform: translate(0,50px);">
+      </div>
+    <div class="row" id="tesa">
+      <div class="col-md-7">
+        
+      <div class="login-form" id="stats">
+
+      <h4 class="text-center mb-4 text-success ucapan">Good <span></span>, $(username)</h4>
+      <p class="text-center text-primary">You just have a logout!</p>
+        <table class="table table-sm">
+          <tbody>
+          	<tr>
+          		<td class="title">Username</td>
+          		<td class="content">: $(username)</td>
+          	</tr>
+            <tr>
+              <td class="title">Ip Address </td>
+              <td class="content">: $(ip)</td>
+            </tr>
+            <tr>
+            	<td class="title">Mac Address</td>
+            	<td class="content">: $(mac)</td>
+            </tr>
+            <tr>
+            	<td class="title">Session Time</td>
+            	<td class="content">: $(uptime)</td>
+            </tr>
+            <tr>
+              <td class="title">Bytes Up/Down</td>
+              <td class="content">: $(bytes-in-nice) / $(bytes-out-nice)</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+            </tr>
+
+          </tbody>
+        </table>
+
+   <a href="login.html" class="btn btn-primary btn-block"><i class="fas fa-sign-in-alt"></i> Login</a>
+     
+    </div>
+    </div>  
+      <div class="col-md-5 my-auto status-bisa" id="logo-bisa">
+        <p class="text-primary sapaan"></p>
+        <img src="assets/img/smk-bisa.png" class="smk-bisa">
+      </div>
+    </div>
+
+  </div>
+   </div>
+</div>
+<!-- end of login form -->
+
+
+<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="assets/js/particles.min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript">
+// ucapan
+  $(window).on('load', function(){
+    $('.load-wrapper').addClass('hide');
+       setTimeout(function(){
+      $('td.content').css({
+        'opacity'   : '1',
+        'animation' : 'anim 1s linear',
+        'transform' : 'translate(0,0)'
+      });
+    $('td.title').css({
+        'opacity'   : '1',
+        'animation' : 'anim2 1s linear',
+        'transform' : 'translate(0,0)'
+      })
+    },1000);
+  })
+
+  var time = new Date().toLocaleString("en-US", {timeZone: "Asia/Jakarta"});
+    time = new Date(time);
+    time = time.getHours();
+    var ucapan;
+    if( time >= 0 && time < 12)
+    {
+      ucapan = 'morning';
+    }else if( time >= 12 && time < 15)
+    {
+      ucapan = 'afternoon'
+    }else if( time >= 15 && time < 18)
+    {
+      ucapan = 'evening';
+    }else
+    {
+      ucapan = 'night';
+    }
+    $('.ucapan span').text(ucapan); 
+</script>
+</body>
+</html>
